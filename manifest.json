@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Astral",
+  "version": "1.0.0",
+  "description": "A focused, local audio control panel for Discord Web.",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": ["https://discord.com/*", "https://discordapp.com/*"],
+  "action": {
+    "default_title": "Astral",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png"
+    },
+    "default_popup": "src/popup/popup.html"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "commands": {
+    "toggle-astral": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Open or close Astral"
+    },
+    "toggle-astral-power": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Toggle Astral processing"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*", "https://discordapp.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/astral.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/page-hook.js", "src/astral.css", "assets/icon-16.png", "assets/icon-32.png", "assets/icon-48.png", "assets/icon-128.png"],
+      "matches": ["https://discord.com/*", "https://discordapp.com/*"]
+    }
+  ]
+}
