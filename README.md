@@ -1,30 +1,27 @@
 # Astral
 
-Astral is a Chrome and Firefox compatible Manifest V3 Discord Web extension written in JavaScript, HTML, and CSS.
+A real-time **Discord Web voice effects extension** built with the Web Audio API.
 
-The supplied image is used for the extension icon, toolbar icon, and in-panel launcher. The panel includes touch-safe sizing and dragging for mobile browsers that support extensions.
+[![Discord](https://img.shields.io/badge/Discord-Web-5865F2?logo=discord&logoColor=white)](https://discord.com/)
+[![Chrome](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/)
+[![Firefox](https://img.shields.io/badge/Firefox-Extension-FF7139?logo=firefox&logoColor=white)](https://addons.mozilla.org/)
 
 ## Features
 
-- Floating Astral panel with a close button
-- Draggable panel position with local persistence
-- Master power control
-- Custom, Flat, Bass presence, Radio voice, Lo-fi texture, and Wide room profiles
-- Master gain, overdrive, edge, and tube warmth
-- Bitcrusher and stereo motion controls
-- Low, mid, and high equalizer controls
-- Echo and reverb mix controls
-- Keyboard shortcuts for opening the panel and toggling processing
-- Local-only browser storage
+- Real-time voice effects
+- EQ, gain and distortion
+- Echo and reverb
+- Radio and Lo-fi presets
+- Lightweight and customizable
+- Chrome and Firefox support
 
-## Load the extension
+## Installation
 
-1. Open `chrome://extensions` or `about:debugging`.
-2. Enable developer mode.
-3. Choose Load unpacked for Chrome or Load Temporary Add-on for Firefox.
-4. Select this `extensions/astral` directory.
-5. Open Discord Web and select the Astral mark in the lower-right corner.
+1. Download the repository.
+2. Open your browser's extension management page.
+3. Enable Developer Mode.
+4. Choose **Load Unpacked** / **Load Temporary Add-on**.
+5. Select the Astral extension folder.
+6. Open Discord Web.
 
-## Mobile support
-
-Firefox for Android supports compatible extensions. Kiwi Browser can load Chrome-style extensions when its extension support is enabled. Chrome for Android does not officially support unpacked extensions.
+> Built for experimenting with Discord Web voice effects.
